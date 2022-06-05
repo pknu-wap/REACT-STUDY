@@ -1,6 +1,5 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import styled from "styled-components";
-import useTimer from "../hooks/useTimer";
 import { useTodoState } from "../TodoContext";
 
 const TodoHeadBlock = styled.div`
@@ -30,31 +29,20 @@ const TodoHeadBlock = styled.div`
 function TodoHead() {
     const todos = useTodoState();
     const undoTasks = todos.filter((todo) => !todo.done);
-    // const [dayTime, setDayTime] = useState(Date.now());
-    const [getDayTime, getDayName, getDate] = useTimer(Date.now());
 
-    // useEffect(() => {
-    //     setInterval(() => setDayTime(Date.now()), 1000);
-    //     return () => {
-    //         clearInterval();
-    //     };
-    // }, []);
-
-    // const today = new Date();
-    // const dateString = today.toLocaleDateString("ko-KR", {
-    //     year: "numeric",
-    //     month: "long",
-    //     day: "numeric",
-    // });
-    // const dayName = today.toLocaleDateString("ko-KR", { weekday: "long" });
-    // const getDayTime = () => new Date(dayTime).toLocaleTimeString("ko-KR");
+    const today = new Date();
+    const dateString = today.toLocaleDateString("ko-KR", {
+        year: "numeric",
+        month: "long",
+        day: "numeric",
+    });
+    const dayName = today.toLocaleDateString("ko-KR", { weekday: "long" });
 
     return (
         <TodoHeadBlock>
-            <h1>{getDate()}</h1>
-            <div className="day">{getDayName()}</div>
-            <div className="day">{getDayTime()}</div>
-            <div className="tasks-left">{undoTasks.length ? `할 일 ${undoTasks.length}개 남음` : `다 끝냈다~!`}</div>
+            <h1>{dayName}</h1>
+            <div className="day">{dateString}</div>
+            <div className="tasks-left">{`할 일 ${undoTasks.length}개 남음`}</div>
         </TodoHeadBlock>
     );
 }
