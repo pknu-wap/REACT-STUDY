@@ -39,8 +39,8 @@ const CheckCircle = styled.div`
   justify-content: center;
   margin-right: 20px;
   cursor: pointer;
-  ${(props) =>
-    props.done
+  ${({ done }) =>
+    done
       ? css`
           border: 1px solid #38d9a9;
           color: #38d9a9;
@@ -48,7 +48,6 @@ const CheckCircle = styled.div`
       : css`
           :hover {
             border: 1px solid #38d9a9;
-            color: #38d9a9;
           }
         `}
 `;
