@@ -4,7 +4,7 @@ import TodoHead from "./components/ToDoHead/index";
 import TodoTemplate from "./components/ToDoTemplate/index";
 import TodoList from "./components/ToDoList/index";
 import TodoCreate from "./components/ToDoCreate/index";
-import { TodoProvider } from "./TodoContext";
+import { TodoProvider } from "././store/TodoContext";
 
 const GlobalStyle = createGlobalStyle`
   body {

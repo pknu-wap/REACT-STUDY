@@ -1,5 +1,5 @@
 import React from "react";
-import { useTodoState } from "../../TodoContext";
+import { useTodoState } from "../.././store/TodoContext";
 import S from "./styled";
 
 function TodoHead() {
