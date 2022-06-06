@@ -40,17 +40,18 @@ const CheckCircle = styled.div`
     margin-right: 20px;
     cursor: pointer;
     ${(props) =>
-        ((props.done === true) &&
+        props.done ? 
         css`
             border: 1px solid #38d9a9;
             color: #38d9a9;
-        `)||
-        ((props.done === false) &&
+        `:
         css`
-            hover{ color:#ced4da; }
-            border: 1px solid #ced4da;
-            color: #ced4da;
-        `)
+            &:hover(
+                border: 1px solid #38d9a9;
+                color: #38d9a9;
+                background-color:#38d9a9;
+            )
+        `
     }
 `;
 
