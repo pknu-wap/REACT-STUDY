@@ -73,9 +73,11 @@ const Input = styled.input`
   box-sizing: border-box;
 `;
 
-export default {
+const S = {
   CircleButton,
   InsertFormPositioner,
   InsertForm,
   Input,
 };
+
+export default S;

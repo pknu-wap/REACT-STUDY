@@ -60,9 +60,11 @@ const Text = styled.div`
     `}
 `;
 
-export default {
+const S = {
   Remove,
   TodoItemBlock,
   CheckCircle,
   Text,
 };
+
+export default S;

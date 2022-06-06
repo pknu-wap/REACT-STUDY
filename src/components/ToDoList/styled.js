@@ -7,6 +7,8 @@ const TodoListBlock = styled.div`
   overflow-y: auto;
 `;
 
-export default {
+const S = {
   TodoListBlock,
 };
+
+export default S;

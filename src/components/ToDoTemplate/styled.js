@@ -16,6 +16,8 @@ const TodoTemplateBlock = styled.div`
   flex-direction: column;
 `;
 
-export default {
+const S = {
   TodoTemplateBlock,
 };
+
+export default S;

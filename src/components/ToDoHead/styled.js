@@ -24,6 +24,8 @@ const TodoHeadBlock = styled.div`
   }
 `;
 
-export default {
+const S = {
   TodoHeadBlock,
 };
+
+export default S;
