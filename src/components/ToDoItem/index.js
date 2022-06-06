@@ -20,7 +20,7 @@ function TodoItem({ id, done, text }) {
             <S.CheckCircle done={done} onClick={onToggle} color={color}>
                 {done && <MdDone />}
             </S.CheckCircle>
-            <S.Text done={done}>{text}</S.Text>
+            <S.Text done={done}>{(Math.floor(Math.random() * 4)+1)+"."+text}</S.Text>
             <S.Remove onClick={onRemove}>
                 <MdDelete />
             </S.Remove>

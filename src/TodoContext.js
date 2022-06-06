@@ -5,21 +5,25 @@ const initialTodos = [
         id: 1,
         text: "Create project",
         done: true,
+        priority:  Math.floor(Math.random() * 4)+1,
     },
     {
         id: 2,
         text: "Style component",
         done: true,
+        priority:  Math.floor(Math.random() * 4)+1,
     },
     {
         id: 3,
         text: "Make Context",
         done: false,
+        priority:  Math.floor(Math.random() * 4)+1,
     },
     {
         id: 4,
         text: "Implement features",
         done: false,
+        priority:  Math.floor(Math.random() * 4)+1,
     },
 ];
 
