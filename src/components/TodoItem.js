@@ -39,20 +39,17 @@ const CheckCircle = styled.div`
     justify-content: center;
     margin-right: 20px;
     cursor: pointer;
-    ${(props) =>
-        props.done &&
-        css`
-            border: 1px solid #38d9a9;
-            color: #38d9a9;
-        `}
-
-    ${(props) =>
-        !props.done &&
-        css`
-            &:hover {
-                border: 1px solid #38d9a9;
-            }
-        `}
+    ${({ done }) =>
+        done
+            ? css`
+                  border: 1px solid #38d9a9;
+                  color: #38d9a9;
+              `
+            : css`
+                  &:hover {
+                      border: 1px solid #38d9a9;
+                  }
+              `}
 `;
 
 const Text = styled.div`
