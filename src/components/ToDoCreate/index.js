@@ -2,8 +2,9 @@ import React, { useState } from "react";
 import { MdAdd } from "react-icons/md";
 import S from "./styled";
 import { useTodoDispatch, useTodoNextId } from "../../TodoContext";
+import { getRandom } from "../../utils/getRandom";
 
-function TodoCreate() {
+function TodoCreate({ num }) {
   const [open, setOpen] = useState(false);
   const [value, setValue] = useState("");
 
@@ -20,6 +21,7 @@ function TodoCreate() {
         id: nextId.current,
         text: value,
         done: false,
+        num: getRandom(1, num),
       },
     });
     setValue("");
