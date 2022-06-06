@@ -4,7 +4,7 @@ import { useTodoDispatch } from "../../TodoContext";
 import S from "./styled";
 import useRandomColor from "../../hooks/useRandomColor";
 
-function TodoItem({ id, done, text }) {
+function TodoItem({ id, done, text, priority }) {
     const [setColors, getRandomColor] = useRandomColor();
     const [color, setColor] = useState("");
     const dispatch = useTodoDispatch();
@@ -21,6 +21,7 @@ function TodoItem({ id, done, text }) {
                 {done && <MdDone />}
             </S.CheckCircle>
             <S.Text done={done}>{text}</S.Text>
+            <S.Text>{priority}</S.Text>
             <S.Remove onClick={onRemove}>
                 <MdDelete />
             </S.Remove>
