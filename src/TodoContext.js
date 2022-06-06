@@ -1,28 +1,37 @@
 import React, { createContext, useContext, useReducer, useRef } from "react";
 
+export function getRandomPriority() {
+    return Math.floor(Math.random() * 4);
+}
+
 const initialTodos = [
     {
         id: 1,
         text: "Create project",
         done: true,
+        priority: getRandomPriority(),
     },
     {
         id: 2,
         text: "Style component",
         done: true,
+        priority: getRandomPriority(),
     },
     {
         id: 3,
         text: "Make Context",
         done: false,
+        priority: getRandomPriority(),
     },
     {
         id: 4,
         text: "Implement features",
         done: false,
+        priority: getRandomPriority(),
     },
 ];
 
+console.log(initialTodos);
 function todoReducer(state, action) {
     switch (action.type) {
         case "CREATE":

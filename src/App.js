@@ -1,9 +1,9 @@
 import React from "react";
 import { createGlobalStyle } from "styled-components";
-import TodoHead from "./components/TodoHead";
-import TodoTemplate from "./components/TodoTemplate";
-import TodoList from "./components/TodoList";
-import TodoCreate from "./components/TodoCreate";
+import TodoHead from "./components/ToDoHead/index";
+import TodoTemplate from "./components/ToDoTemplate/index";
+import TodoList from "./components/ToDoList/index";
+import TodoCreate from "./components/ToDoCreate/index";
 import { TodoProvider } from "./TodoContext";
 
 const GlobalStyle = createGlobalStyle`
@@ -13,16 +13,16 @@ const GlobalStyle = createGlobalStyle`
 `;
 
 function App() {
-    return (
-        <TodoProvider>
-            <GlobalStyle />
-            <TodoTemplate>
-                <TodoHead />
-                <TodoList />
-                <TodoCreate />
-            </TodoTemplate>
-        </TodoProvider>
-    );
+  return (
+    <TodoProvider>
+      <GlobalStyle />
+      <TodoTemplate>
+        <TodoHead />
+        <TodoList />
+        <TodoCreate />
+      </TodoTemplate>
+    </TodoProvider>
+  );
 }
 
 export default App;
