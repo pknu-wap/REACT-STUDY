@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { MdAdd } from "react-icons/md";
 import S from "./styled";
-import { useTodoDispatch, useTodoNextId } from "../../TodoContext";
+import { Priority, useTodoDispatch, useTodoNextId } from "../../TodoContext";
 
 function TodoCreate() {
   const [open, setOpen] = useState(false);
@@ -20,6 +20,7 @@ function TodoCreate() {
         id: nextId.current,
         text: value,
         done: false,
+        priority: Priority(),
       },
     });
     setValue("");
