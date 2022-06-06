@@ -25,6 +25,8 @@ const TodoItemBlock = styled.div`
   }
 `;
 
+const color = ["#ffa500", "#fa8072", "#adff2f", "#7fffd4"];
+
 const CheckCircle = styled.div`
   width: 32px;
   height: 32px;
@@ -39,8 +41,8 @@ const CheckCircle = styled.div`
   ${({ done }) =>
     done
       ? css`
-          border: 1px solid #38d9a9;
-          color: #38d9a9;
+          border: 1px solid ${color[Math.floor(Math.random()*4)]} ;
+          color: ${color[Math.floor(Math.random()*4)]} ;
         `
       : css`
           :hover {
