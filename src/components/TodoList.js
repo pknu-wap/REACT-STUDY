@@ -2,13 +2,9 @@ import React from "react";
 import styled from "styled-components";
 import { useTodoState } from "../TodoContext";
 import TodoItem from "./TodoItem";
+import style from "./style-components";
 
-const TodoListBlock = styled.div`
-    flex: 1;
-    padding: 20px 32px;
-    padding-bottom: 48px;
-    overflow-y: auto;
-`;
+const TodoListBlock = style.TodoListBlock();
 
 function TodoList() {
     const todos = useTodoState();
