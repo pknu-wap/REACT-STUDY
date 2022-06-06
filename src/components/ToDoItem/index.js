@@ -2,14 +2,10 @@ import React from "react";
 import { MdDone, MdDelete } from "react-icons/md";
 import { useTodoDispatch } from "../../TodoContext";
 import S from "./styled";
-
-const getRandomColor = () => {
-    const colors = ["#ffa500", "#fa8072", "#adff2f", "#7fffd4"];
-    const randomNumber = Math.floor(Math.random() * 4);
-    return colors[randomNumber];
-};
+import useRandomColor from "../../hooks/useRandomColor";
 
 function TodoItem({ id, done, text }) {
+    const [setColor, getRandomColor] = useRandomColor();
     const dispatch = useTodoDispatch();
     const onToggle = () => dispatch({ type: "TOGGLE", id });
     const onRemove = () => dispatch({ type: "REMOVE", id });
